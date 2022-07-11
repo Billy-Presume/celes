@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect } from "react";
+import { fetchData } from "./services/api";
+import { URL } from "./utils/constants/url.constants";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [bodies, setBodies] = useState({});
+
+  // use useEffect to fetch the data from the API
+  useEffect(() => {
+    fetchData(URL).then((bodies) => setBodies(bodies["bodies"]));
+    console.log(bodies[0]);
+  }, []);
+
+  return <div className="App">Celes</div>;
 }
 
 export default App;
