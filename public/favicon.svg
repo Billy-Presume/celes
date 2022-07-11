@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1000" height="1000"><rect width="1000" height="1000" rx="200" ry="200" fill="#ffffff"></rect><g transform="matrix(11.11111111111111,0,0,11.11111111111111,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="90" height="90"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 90"><defs><style>.cls-1{fill:#073349;}.cls-2{fill:#09b2a5;}.cls-3{fill:#ffd400;}.cls-4{fill:#1b5a89;}.cls-5{fill:#2cb4ff;}.cls-6{fill:#f94bc3;}</style></defs><title>solar-system</title><g id="solar-system"><g id="solar-system-2" data-name="solar-system"><circle id="back" class="cls-1" cx="45" cy="45" r="42.5"></circle><g id="solar-system-3" data-name="solar-system"><circle class="cls-2" cx="36.18" cy="40.02" r="3.46"></circle><circle class="cls-3" cx="45" cy="45" r="4.33"></circle><path class="cls-4" d="M67.16,34.05a.87.87,0,0,1-.77-.46c-.13-.25-.26-.49-.4-.73a.87.87,0,1,1,1.5-.87q.23.39.44.79A.87.87,0,0,1,67.56,34,.86.86,0,0,1,67.16,34.05Z"></path><path class="cls-4" d="M45,71a26,26,0,1,1,12.21-48.9.87.87,0,0,1-.82,1.53A24.22,24.22,0,1,0,67.45,35.84a.87.87,0,0,1,1.6-.66A26,26,0,0,1,45,71Z"></path><path class="cls-4" d="M45.07,64a.87.87,0,0,1,0-1.73l.83,0a.88.88,0,0,1,.91.82A.87.87,0,0,1,46,64l-.9,0Z"></path><path class="cls-4" d="M42.52,63.88H42.4A19.05,19.05,0,1,1,59,57.93a.87.87,0,1,1-1.27-1.18,17.31,17.31,0,1,0-15.08,5.4.87.87,0,0,1-.12,1.72Z"></path><path class="cls-4" d="M45,57.12a12.14,12.14,0,0,1-11.7-8.94A.87.87,0,1,1,35,47.73,10.38,10.38,0,1,0,42.25,35a.87.87,0,1,1-.45-1.67A12.12,12.12,0,1,1,45,57.12Z"></path><circle class="cls-5" cx="62.64" cy="26.82" r="3.46"></circle><circle class="cls-6" cx="52.79" cy="61.23" r="3.46"></circle></g></g></g></svg></svg></g></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="1000" height="1000"><g transform="matrix(16.666666666666668,0,0,16.666666666666668,-5.684341886080802e-14,-5.684341886080802e-14)" style="filter: contrast(1) brightness(1)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="60" height="60"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 60 60" style="enable-background:new 0 0 60 60;" xml:space="preserve">
+<g>
+	<g>
+		<path style="fill:#E6E6E6;" d="M30,50c11.028,0,20-8.972,20-20s-8.972-20-20-20c-3.593,0-7.136,0.984-10.246,2.846
+			c-0.474,0.284-0.628,0.897-0.344,1.372c0.284,0.474,0.898,0.628,1.372,0.344C23.581,12.886,26.769,12,30,12
+			c9.925,0,18,8.075,18,18s-8.075,18-18,18s-18-8.075-18-18c0-3.719,1.137-7.297,3.288-10.349c0.318-0.451,0.21-1.075-0.241-1.394
+			c-0.453-0.318-1.076-0.21-1.394,0.241C11.263,21.889,10,25.866,10,30C10,41.028,18.972,50,30,50z"></path>
+		<path style="fill:#E6E6E6;" d="M54.712,12.997c-0.314-0.456-0.938-0.57-1.391-0.256c-0.455,0.313-0.569,0.936-0.256,1.391
+			C56.294,18.814,58,24.301,58,30c0,15.439-12.561,28-28,28c-6.399,0-12.426-2.108-17.431-6.096
+			c-0.431-0.343-1.06-0.273-1.405,0.159c-0.344,0.432-0.273,1.061,0.159,1.405C16.685,57.741,23.144,60,30,60
+			c16.542,0,30-13.458,30-30C60,23.894,58.171,18.014,54.712,12.997z"></path>
+		<path style="fill:#E6E6E6;" d="M2,30C2,14.561,14.561,2,30,2c5.216,0,10.309,1.448,14.728,4.188
+			c0.468,0.29,1.085,0.146,1.377-0.323c0.291-0.469,0.146-1.086-0.323-1.377C41.045,1.552,35.588,0,30,0C13.458,0,0,13.458,0,30
+			c0,6.328,1.954,12.385,5.651,17.516c0.196,0.271,0.502,0.416,0.813,0.416c0.202,0,0.407-0.061,0.583-0.188
+			c0.448-0.323,0.55-0.948,0.227-1.396C3.824,41.559,2,35.906,2,30z"></path>
+	</g>
+	<circle style="fill:#F0C419;" cx="30" cy="30" r="9"></circle>
+	<circle style="fill:#4482C3;" cx="50" cy="9" r="6"></circle>
+	<circle style="fill:#F0785A;" cx="17" cy="16" r="4"></circle>
+	<circle style="fill:#AF8066;" cx="9" cy="50" r="4"></circle>
+	<circle style="fill:#E57E25;" cx="35" cy="36" r="1"></circle>
+	<circle style="fill:#E57E25;" cx="37" cy="34" r="1"></circle>
+	<circle style="fill:#E57E25;" cx="33" cy="34" r="1"></circle>
+	<circle style="fill:#E57E25;" cx="35" cy="32" r="1"></circle>
+	<circle style="fill:#E57E25;" cx="37" cy="30" r="1"></circle>
+	<circle style="fill:#F3D55B;" cx="55" cy="56" r="1"></circle>
+	<circle style="fill:#F3D55B;" cx="58" cy="50" r="1"></circle>
+	<circle style="fill:#F3D55B;" cx="5" cy="9" r="1"></circle>
+	<circle style="fill:#F3D55B;" cx="4" cy="2" r="1"></circle>
+	<circle style="fill:#F3D55B;" cx="12" cy="2" r="1"></circle>
+	<circle style="fill:#F3D55B;" cx="2" cy="57" r="1"></circle>
+	<circle style="fill:#F3D55B;" cx="45" cy="1" r="1"></circle>
+	<circle style="fill:#F3D55B;" cx="32" cy="6" r="1"></circle>
+	<circle style="fill:#F3D55B;" cx="53" cy="41" r="1"></circle>
+	<circle style="fill:#F3D55B;" cx="6" cy="29" r="1"></circle>
+	<circle style="fill:#E57E25;" cx="31" cy="36" r="1"></circle>
+	<circle style="fill:#E57E25;" cx="33" cy="30" r="1"></circle>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg></svg></g></svg></g></svg>
