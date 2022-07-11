@@ -1,18 +1,38 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import { useState, useEffect } from "react";
-import { fetchData } from "./services/api";
-import { URL } from "./utils/constants/url.constants";
+import { useState, Fragment } from "react";
+import { ThemeContext } from "./utils/providers/theme.provider";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyle } from "./styles/global-styles.style";
+import { lightTheme, darkTheme } from "./styles/themes.style";
+import Layout from "./components/layout/layout.component";
+// import { fetchData } from "./services/api";
+// import { URL } from "./utils/constants/url.constants";
 
-function App() {
-  const [bodies, setBodies] = useState({});
+const App = () => {
+	const [theme, setTheme] = useState("light");
+	const currentTheme = theme === "light" ? lightTheme : darkTheme;
+	// const [isLoading, setIsLoading] = useState(false);
+	// const [isError, setIsError] = useState(false);
 
-  // use useEffect to fetch the data from the API
-  useEffect(() => {
-    fetchData(URL).then((bodies) => setBodies(bodies["bodies"]));
-    console.log(bodies[0]);
-  }, []);
-
-  return <div className="App">Celes</div>;
-}
+	return (
+		<ThemeContext.Provider value={{ setTheme, theme }}>
+			<ThemeProvider theme={currentTheme}>
+				<GlobalStyle />
+				<Fragment>
+					<Layout>
+						<div className="App">Celes</div>
+					</Layout>
+				</Fragment>
+			</ThemeProvider>
+		</ThemeContext.Provider>
+	);
+};
 
 export default App;
+
+// const [bodies, setBodies] = useState({});
+
+// // use useEffect to fetch the data from the API
+// useEffect(() => {
+//   fetchData(URL).then((bodies) => setBodies(bodies["bodies"]));
+//   console.log(bodies[0]);
+// }, []);
