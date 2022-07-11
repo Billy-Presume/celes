@@ -4,6 +4,7 @@
 		"es2021": true
 	},
 	"extends": ["eslint:recommended", "plugin:react/recommended","plugin:prettier/recommended"],
+	"parser": "@babel/eslint-parser",
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true
@@ -16,7 +17,6 @@
 		"indent": ["error", "tab"],
 		"linebreak-style": ["error", "unix"],
 		"semi": ["error", "always"],
-		"react/react-in-jsx-scope": "off",
-		"jest": true
+		"react/react-in-jsx-scope": "off"
 	}
 }

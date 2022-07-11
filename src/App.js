@@ -3,6 +3,7 @@ import { ThemeContext } from "./utils/providers/theme.provider";
 import { ThemeProvider } from "styled-components";
 import { GlobalStyle } from "./styles/global-styles.style";
 import { lightTheme, darkTheme } from "./styles/themes.style";
+import { AppRoutes } from "./routes/appRoutes";
 import Layout from "./components/layout/layout.component";
 // import { fetchData } from "./services/api";
 // import { URL } from "./utils/constants/url.constants";
@@ -19,7 +20,7 @@ const App = () => {
 				<GlobalStyle />
 				<Fragment>
 					<Layout>
-						<div className="App">Celes</div>
+						<AppRoutes />
 					</Layout>
 				</Fragment>
 			</ThemeProvider>
