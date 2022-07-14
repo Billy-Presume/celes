@@ -1,4 +1,4 @@
-import { colors } from "./infrastructure.style";
+import { colors } from "./infrastructure.styles";
 
 export const lightTheme = {
 	body: {

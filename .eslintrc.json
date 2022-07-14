@@ -3,20 +3,33 @@
 		"browser": true,
 		"es2021": true
 	},
-	"extends": ["eslint:recommended", "plugin:react/recommended","plugin:prettier/recommended"],
 	"parser": "@babel/eslint-parser",
 	"parserOptions": {
 		"ecmaFeatures": {
 			"jsx": true
 		},
 		"ecmaVersion": "latest",
-		"sourceType": "module"
+		"sourceType": "module",
+		"requireConfigFile": false
 	},
-	"plugins": ["react"],
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"plugins": ["react", "prettier"],
 	"rules": {
 		"indent": ["error", "tab"],
-		"linebreak-style": ["error", "unix"],
+		"linebreak-style": 0,
 		"semi": ["error", "always"],
 		"react/react-in-jsx-scope": "off"
-	}
+	},
+	"extends": [
+		"plugin:prettier/recommended",
+		"plugin:react/recommended",
+		"standard",
+		"plugin:react/jsx-runtime",
+		"plugin:testing-library/react",
+		"plugin:jest/all"
+	]
 }

@@ -1,8 +1,8 @@
 import { useState, Fragment } from "react";
 import { ThemeContext } from "./utils/providers/theme.provider";
 import { ThemeProvider } from "styled-components";
-import { GlobalStyle } from "./styles/global-styles.style";
-import { lightTheme, darkTheme } from "./styles/themes.style";
+import { GlobalStyle } from "./styles/global-styles.styles";
+import { lightTheme, darkTheme } from "./styles/themes.styles";
 import { AppRoutes } from "./routes/appRoutes";
 import Layout from "./components/layout/layout.component";
 // import { fetchData } from "./services/api";

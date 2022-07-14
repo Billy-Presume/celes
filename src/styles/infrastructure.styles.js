@@ -22,6 +22,19 @@ export const colors = {
 				separator: "#282828",
 			},
 		},
+		searchBar: {
+			light: {
+				searchBarContainerBackground: `whitesmoke`,
+				background: `whitesmoke`,
+				hover: `#FFF`,
+			},
+			dark: {
+				backgroundAplha: "rgba(40, 40, 40, 0.3)",
+				searchBarContainerBackground: `#121212`,
+				background: "#777",
+				hover: `#AAA`,
+			},
+		},
 		card: {
 			light: {
 				background: "#FFF",
@@ -50,7 +63,7 @@ export const colors = {
 		},
 		text: {
 			light: {
-				primary: "#111",
+				primary: "#121212",
 				secondary: "#777",
 				tertiary: "#AAA",
 			},
@@ -82,7 +95,8 @@ export const fontWeight = {
 export const fontSize = {
 	title: `20px`,
 	body: `16px`,
-	caption: `12px`,
+	caption: `14px`,
+	subCaption: `12px`,
 	button: `14px`,
 };
 
@@ -92,4 +106,12 @@ export const spacing = {
 	large: `24px`,
 	xlarge: `32px`,
 	xxlarge: `48px`,
+};
+
+export const borderRadius = {
+	small: `8px`,
+	medium: `10px`,
+	large: `12px`,
+	xlarge: `14px`,
+	xxlarge: `16px`,
 };

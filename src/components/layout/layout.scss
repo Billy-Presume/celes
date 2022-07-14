@@ -1,0 +1,59 @@
+.layout-container {
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns: auto 300px;
+	grid-template-areas:
+		"main aside"
+		"footer footer";
+	min-height: 100vh;
+	min-width: auto;
+
+	.header {
+		display: none;
+	}
+
+	// layout components
+	.side-panel {
+		grid-area: aside;
+	}
+
+	main {
+		background-color: aquamarine;
+		grid-area: main;
+	}
+
+	.footer {
+		background-color: bisque;
+		grid-area: footer;
+		grid-column: 1/3;
+		grid-row: 2;
+	}
+
+	/* All devices (landscape tablets, 768px and down) */
+	@media only screen and (max-width: 768px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.7fr 3fr 0.9fr;
+		grid-template-areas:
+			"header"
+			"main"
+			"footer";
+
+		.header {
+			display: block;
+			background-color: aqua;
+			grid-area: header;
+			grid-column: 1;
+			grid-row: auto;
+		}
+
+		main {
+			grid-column: 1;
+			grid-row: 2;
+		}
+
+		.footer {
+			grid-column: 1;
+			grid-row: 3;
+		}
+	}
+}

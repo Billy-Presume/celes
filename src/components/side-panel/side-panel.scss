@@ -1,0 +1,67 @@
+// .wrapper {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	height: 100%;
+// 	width: auto;
+
+// 	.inner-wrapper {
+// 		display: flex;
+// 		flex-direction: column;
+// 		align-items: center;
+// 		height: 100%;
+// 		width: 100%;
+
+// 		.search-bar {
+// 			.search-icon-button {
+// 				display: flex;
+// 				flex: 0.15;
+// 				align-items: center;
+// 				justify-content: center;
+// 				padding: 0;
+// 				border-radius: 6.7px 0 0 6.7px;
+// 				background: #e3e3e3;
+
+// 				&:hover {
+// 					background: #282828;
+
+// 					.search-icon {
+// 						color: #ff971d;
+// 					}
+// 				}
+
+// 				&:active {
+// 					background: #f5ca7b;
+// 				}
+
+// 				.search-icon {
+// 					width: 24px;
+// 					height: 24px;
+// 					// need to change for theme compatibility
+// 					color: #121212;
+// 				}
+// 			}
+// 		}
+
+// 		// .links-wrapper {
+// 		// 	width: 90%;
+
+// 		.link-container {
+// 			.link-component {
+// 				&:hover {
+// 					background: #f5ca7b;
+// 					transition: all 0.3s ease-in-out;
+
+// 					.link-text {
+// 						color: #121212;
+// 					}
+
+// 					.link-icon {
+// 						color: crimson;
+// 					}
+// 				}
+// 			}
+// 			// }
+// 		}
+// 	}
+// }

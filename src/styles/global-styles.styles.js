@@ -10,26 +10,26 @@ export const GlobalStyle = createGlobalStyle`
   body {
       font-family: 'Roboto', sans-serif;
       letter-spacing: 0.5px;
-      background: ${({ theme }) => theme.background};
-      color: ${({ theme }) => theme.color};
-      transition: all 0.50s linear;
+      background: ${({ theme }) => theme.body.background};
+      color: ${({ theme }) => theme.ui.text.primary};
+      transition: all 0.20s linear;
+
     }
 
   a {
       text-decoration: none;
-      color: ${({ theme }) => theme.color};
+      color: ${({ theme }) => theme.ui.text.primary};
     }
 
   button {
     font-family: inherit;
-    border: 0;
-    padding: 0;
-    background: none;
-    cursor: pointer;
-    outline: none;
-    letter-spacing:inherit;
-    text-transform:inherit;
     text-align:inherit;
-    transition: all 0.50s linear;
+    text-transform:inherit;
+    letter-spacing:inherit;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0;
   }
 `;

@@ -1,16 +1,20 @@
-import { Fragment } from "react";
 import Header from "../layout/header/header.component";
-import SidePanel from "../side-panel/side-panel.component";
+import SidePanel from "../side-panel/SidePanel.component";
 import Footer from "../layout/footer/footer.component";
+import "./layout.scss";
 
 const Layout = ({ children }) => {
+	// useEffect(() => {
+	// 	document.getElementById("root").style.display = "grid";
+	// });
+
 	return (
-		<Fragment>
-			<Header />
-			<SidePanel />
+		<div className="layout-container">
+			<Header className="header" />
+			<SidePanel className="side-panel" />
 			<main>{children}</main>
-			<Footer />
-		</Fragment>
+			<Footer className="footer" />
+		</div>
 	);
 };
 
