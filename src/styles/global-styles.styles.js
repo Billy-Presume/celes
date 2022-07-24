@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { spacing } from "./infrastructure.styles";
 
 export const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -12,13 +13,32 @@ export const GlobalStyle = createGlobalStyle`
       letter-spacing: 0.5px;
       background: ${({ theme }) => theme.body.background};
       color: ${({ theme }) => theme.ui.text.primary};
-      transition: all 0.20s linear;
+      transition: all 0.30s ease-in-out;
 
     }
 
   a {
       text-decoration: none;
-      color: ${({ theme }) => theme.ui.text.primary};
+      color: ${({ theme }) => theme.ui.link.color3};
+       transition: all 0.30s ease-in-out;
+
+      &:hover {
+        color: ${({ theme }) => theme.ui.link.hover2};
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:active {
+        color: ${({ theme }) => theme.ui.link.active};
+      }
+    }
+
+  main {
+      flex: 1;
+      display: flex;
+      background: ${({ theme }) => theme.ui.view.background2};;
+      color: ${({ theme }) => theme.ui.view.color};
+      padding: 5px;
+      border-radius: 6px;
     }
 
   button {

@@ -5,8 +5,3 @@ export const Logo = () => {
 		</div>
 	);
 };
-
-// TO FIX SVG NOT RENDERING ISSUE
-// sketch:type TO sketchType
-//     xmlns:xlink TO xmlnsXlink
-//     xlink:href  TO xlinkHref

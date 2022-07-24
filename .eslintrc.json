@@ -19,17 +19,10 @@
 	},
 	"plugins": ["react", "prettier"],
 	"rules": {
-		"indent": ["error", "tab"],
+		"indent": 0,
 		"linebreak-style": 0,
 		"semi": ["error", "always"],
 		"react/react-in-jsx-scope": "off"
 	},
-	"extends": [
-		"plugin:prettier/recommended",
-		"plugin:react/recommended",
-		"standard",
-		"plugin:react/jsx-runtime",
-		"plugin:testing-library/react",
-		"plugin:jest/all"
-	]
+	"extends": []
 }

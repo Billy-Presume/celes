@@ -1,59 +1,124 @@
 export const colors = {
 	body: {
 		light: {
-			background: "#FEF1EA",
-			backgroundAplha: "rgba(254, 241, 234, 0.3)",
+			background: "#00385a",
 		},
 		dark: {
-			background: "#121212",
-			backgroundAplha: "rgba(18, 18, 18, 0.3)",
+			background: "#000d22",
 		},
 	},
 	ui: {
+		header: {
+			light: {
+				background: "#FF971D",
+				color: "#000d22",
+			},
+			dark: {
+				background: "#252525",
+				color: "#E3E3E3",
+			},
+		},
+		view: {
+			light: {
+				background: "#F3F3F3",
+				background2: "#FFF",
+				color: "#000d22",
+			},
+			dark: {
+				background: "#222",
+				background2: "#161616",
+				color: "#E3E3E3",
+			},
+		},
 		sidepanel: {
 			light: {
 				background: "#111F4D",
 				backgroundAplha: "rgba(17, 31, 77, 0.3)",
-				separator: "#E7EAF4",
+				separator: "#FBECCF",
 			},
 			dark: {
-				background: "#121319",
+				background: "rgb(0, 13, 34,0.7)",
 				backgroundAplha: "rgba(25, 25, 18, 0.3)",
-				separator: "#282828",
+				separator: "#D4E3FB",
+			},
+		},
+		footer: {
+			light: {
+				background: "#252525",
+				color: "#E3E3E3",
+			},
+			dark: {
+				background: "#00385a",
+				color: "#FF971D",
 			},
 		},
 		searchBar: {
 			light: {
-				searchBarContainerBackground: `whitesmoke`,
-				background: `whitesmoke`,
-				hover: `#FFF`,
+				searchBarContainerBackground: "#F3F3F3",
+				background: "#F3F3F3",
+				hover: "#FFF",
 			},
 			dark: {
-				backgroundAplha: "rgba(40, 40, 40, 0.3)",
-				searchBarContainerBackground: `#121212`,
-				background: "#777",
-				hover: `#AAA`,
+				searchBarContainerBackground: "#121212",
+				background: "#00385a",
+				hover: "#004664",
+			},
+		},
+		link: {
+			light: {
+				color: "#111F4D",
+				color2: "#1064EA",
+				color3: "#00aedb",
+				hover: "#dc143c",
+				hover2: "#FBECCF",
+				focus: "#dc143c",
+				active: "#f37735",
+				background: "#F3F3F3",
+				backgroundHover: "#F5CA7B",
+				backgroundFocus: "#FF971D",
+			},
+			dark: {
+				color: "#121212",
+				color2: "#dc143c",
+				color3: "#f6cd61",
+				hover: "#FF971D",
+				hover2: "#D4E3FB",
+				focus: "#dc143c",
+				active: "#FBECCF",
+				background: "#FF971D",
+				backgroundHover: "#00385a",
+				backgroundFocus: "#FBECCF",
 			},
 		},
 		card: {
 			light: {
-				background: "#FFF",
-				backgroundAplha: "rgba(236, 240, 241, 0.3)",
+				background: "rgba(17, 25, 40, 0.95)",
+				borderColor: "rgba(0, 13, 34, 0.125)",
+				titleColor: "#f3f3f3",
+				secondaryTitleColor: "#D4E3FB",
+				subtitleColor: "#F5CA7B",
+				descriptionColor: "#E3E3E3",
 			},
 			dark: {
-				background: "#282828",
-				backgroundAplha: "rgba(40, 40, 40, 0.3)",
+				background: "rgba(0, 13, 34, 0.85)",
+				borderColor: "rgba(255, 255, 255, 0.125)",
+				titleColor: "#E3E3E3",
+				secondaryTitleColor: "#F5CA7B",
+				subtitleColor: "#D4E3FB",
+				descriptionColor: "#E9E9E9",
 			},
 		},
 		button: {
 			light: {
+				searchButton: "#f37735",
 				borderColor: "#1064EA",
 				primary: "#1064EA",
 				secondary: "#D4E3FB",
 				hover: "#A8C7F7",
-				active: "#E9F1FD",
+				active: "#D4E3FB",
 			},
 			dark: {
+				searchButton: "#FBECCF",
 				borderColor: "#FF971D",
 				primary: "#FF971D",
 				secondary: "#FDF5E7",
@@ -63,11 +128,13 @@ export const colors = {
 		},
 		text: {
 			light: {
-				primary: "#121212",
+				searchInput: "#121212",
+				primary: "#111F4D",
 				secondary: "#777",
 				tertiary: "#AAA",
 			},
 			dark: {
+				searchInput: "#FFF",
 				primary: "#E3E3E3",
 				secondary: "#F5CA7B",
 				tertiary: "#E9F1FD",

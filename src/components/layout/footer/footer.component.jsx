@@ -1,22 +1,66 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../../utils/providers/theme.provider";
+import {
+	FooterContainer,
+	Separator,
+	ContainerWrapper,
+	LinkContainer,
+	LinkComponent,
+	LinkText,
+} from "../../../styles/styled-components.styles";
+import { Links, SocialLinks } from "../../../routes/Links";
+
 const Footer = () => {
+	const { theme } = useContext(ThemeContext);
+	const customStyles = {
+		linkColor: {
+			backgroundColor: `transparent`,
+			color: `${theme === "light" ? "#D4E3FB" : "#FBECCF"}`,
+		},
+		separatorStyles: {
+			height: `2px`,
+			marginTop: 0,
+			borderRadius: `6px`,
+			backgroundColor: `${
+				theme === "light" ? "#282828" : "rgba(18,17,77,.15)"
+			}`,
+		},
+		pTagStyles: {
+			color: `${theme === "light" ? "#777" : "#777"}`,
+		},
+	};
+
 	return (
-		<div className="footer">
-			<div className="footer-content">
-				<ul>
-					<li>Home</li>
-					<li>Asteroid</li>
-					<li>Comets</li>
-					<li>Dwarf Planets</li>
-					<li>Moons</li>
-					<li>Planets</li>
-					<li>Stars</li>
-				</ul>
-				<p>
+		<FooterContainer>
+			<ContainerWrapper>
+				{Links.map(({ id, name, link }) => (
+					<LinkContainer key={id} style={{ marginTop: 0 }}>
+						<LinkComponent to={link} style={customStyles.linkColor}>
+							<LinkText>{name}</LinkText>
+						</LinkComponent>
+					</LinkContainer>
+				))}
+				<Separator style={customStyles.separatorStyles} />
+				{SocialLinks.map(({ id, name, title, link }) => (
+					<LinkContainer key={id} style={{ marginTop: 0 }}>
+						<a
+							href={link}
+							target="_blank"
+							rel="noreferrer noopener"
+							title={title}
+						>
+							<LinkText>{name}</LinkText>
+						</a>
+					</LinkContainer>
+				))}
+				<Separator style={customStyles.separatorStyles} />
+				{/* <p>
 					<a href="mailto:billypresume@gmail.com">billypresume@gmail.com</a>
-				</p>
-				<p>Created by Billy Presume. © 2020</p>
-			</div>
-		</div>
+				</p> */}
+				{/* need to create a helper function to generate current year */}
+				<p style={customStyles.pTagStyles}>Created by Billy Presume. © 2022</p>
+			</ContainerWrapper>
+		</FooterContainer>
 	);
 };
 

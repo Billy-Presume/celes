@@ -1,0 +1,15 @@
+.home-page {
+	flex: 1;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+
+	.container {
+        padding: 8px;
+        color: inherit;
+        background-color: inherit;
+
+
+	}
+}

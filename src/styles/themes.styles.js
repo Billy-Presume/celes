@@ -5,8 +5,23 @@ export const lightTheme = {
 		...colors.body.light,
 	},
 	ui: {
+		header: {
+			...colors.ui.header.light,
+		},
+		view: {
+			...colors.ui.view.light,
+		},
 		sidepanel: {
 			...colors.ui.sidepanel.light,
+		},
+		footer: {
+			...colors.ui.footer.light,
+		},
+		searchBar: {
+			...colors.ui.searchBar.light,
+		},
+		link: {
+			...colors.ui.link.light,
 		},
 		card: {
 			...colors.ui.card.light,
@@ -27,8 +42,23 @@ export const darkTheme = {
 		...colors.body.dark,
 	},
 	ui: {
+		header: {
+			...colors.ui.header.dark,
+		},
+		view: {
+			...colors.ui.view.dark,
+		},
 		sidepanel: {
 			...colors.ui.sidepanel.dark,
+		},
+		footer: {
+			...colors.ui.footer.dark,
+		},
+		searchBar: {
+			...colors.ui.searchBar.dark,
+		},
+		link: {
+			...colors.ui.link.dark,
 		},
 		card: {
 			...colors.ui.card.dark,
