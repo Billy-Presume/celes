@@ -118,12 +118,12 @@ export const colors = {
 				active: "#D4E3FB",
 			},
 			dark: {
-				searchButton: "#FBECCF",
+				searchButton: "#F5CA7B",
 				borderColor: "#FF971D",
 				primary: "#FF971D",
 				secondary: "#FDF5E7",
-				hover: "#F5CA7B",
-				active: "#FBECCF",
+				hover: "#FBECCF",
+				active: "#f6cd61",
 			},
 		},
 		text: {

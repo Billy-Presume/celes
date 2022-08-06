@@ -62,7 +62,7 @@ export const SearchBar = styled.div`
 			background-color: ${({ theme }) => theme.ui.button.hover};
 		}
 
-		&:focus {
+		&:active {
 			background-color: ${({ theme }) => theme.ui.button.active};
 		}
 	}
