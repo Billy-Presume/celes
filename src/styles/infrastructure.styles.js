@@ -132,12 +132,14 @@ export const colors = {
 				primary: "#111F4D",
 				secondary: "#777",
 				tertiary: "#AAA",
+				buttonText: "#FFF",
 			},
 			dark: {
 				searchInput: "#FFF",
 				primary: "#E3E3E3",
 				secondary: "#F5CA7B",
 				tertiary: "#E9F1FD",
+				buttonText: "#111",
 			},
 		},
 		icon: {

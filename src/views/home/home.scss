@@ -5,11 +5,53 @@
 	align-items: center;
 	justify-content: center;
 
+	h1 {
+		display: block;
+		font-size: 3rem;
+		font-weight: bold;
+		align-self: center;
+		color: aqua;
+	}
+
 	.container {
-        padding: 8px;
-        color: inherit;
-        background-color: inherit;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: space-around;
+		overflow-x: wrap;
+		overflow-y: auto;
+		row-gap: 35px;
+		height: 100vh;
+		padding: 8px;
+		// color: inherit;
+		// background-color: #fff;
 
+		// Scrollbar
+		scroll-behavior: smooth;
+		overscroll-behavior: auto;
 
+		&::-webkit-scrollbar {
+			background-color: rgba(60, 47, 47, 0.2);
+			width: 8px;
+			margin-top: 3px;
+			border-radius: 20px;
+		}
+
+		/* background of the scrollbar except button or resizer */
+		&::-webkit-scrollbar-track {
+			display: none;
+		}
+
+		/* scrollbar itself */
+		&::-webkit-scrollbar-thumb {
+			background-color: rgba(60, 47, 47, 0.5);
+			border-radius: 20px;
+			border: 2px solid #999;
+		}
+
+		/* set button(top and bottom of the scrollbar) */
+		&::-webkit-scrollbar-button {
+			display: none;
+		}
 	}
 }

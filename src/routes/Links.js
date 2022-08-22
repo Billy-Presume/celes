@@ -23,8 +23,8 @@ export const Links = [
 	},
 	{
 		id: 4,
-		name: "DwarfPlanets",
-		link: "/DwarfPlanets",
+		name: "Dwarf Planets",
+		link: "/Dwarf Planets",
 		icon: <TbBlur />,
 	},
 	{

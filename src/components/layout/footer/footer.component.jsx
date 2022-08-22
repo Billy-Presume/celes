@@ -22,7 +22,7 @@ const Footer = () => {
 			marginTop: 0,
 			borderRadius: `6px`,
 			backgroundColor: `${
-				theme === "light" ? "#282828" : "rgba(18,17,77,.15)"
+				theme === "light" ? "#282828" : "rgba(18,17,77,.05)"
 			}`,
 		},
 		pTagStyles: {
@@ -58,7 +58,9 @@ const Footer = () => {
 					<a href="mailto:billypresume@gmail.com">billypresume@gmail.com</a>
 				</p> */}
 				{/* need to create a helper function to generate current year */}
-				<p style={customStyles.pTagStyles}>Created by Billy Presume. © 2022</p>
+				<p style={customStyles.pTagStyles}>
+					© 2022 Billy Présumé - All Rights Reserved.
+				</p>
 			</ContainerWrapper>
 		</FooterContainer>
 	);

@@ -24,6 +24,11 @@ export const LogoContainer = styled.div`
 	}
 `;
 
+export const ContainerWrapper = styled.div`
+	width: 90%;
+	transition: inherit;
+`;
+
 export const Container = styled.div`
 	width: 100%;
 	height: 100%;
@@ -41,7 +46,7 @@ export const SearchBar = styled.div`
 
 	&:hover,
 	:focus {
-		${"" /* transition: all 0.2s ease; */}
+		transition: all 0.2s ease;
 		background-color: ${({ theme }) => theme.ui.searchBar.hover};
 	}
 
@@ -99,10 +104,6 @@ export const Separator = styled.div`
 	margin-top: ${spacing.large};
 	transition: inherit;
 `;
-export const ContainerWrapper = styled.div`
-	width: 90%;
-	transition: inherit;
-`;
 
 export const LinkContainer = styled.span`
 	width: fit-content;
@@ -117,7 +118,7 @@ export const LinkComponent = styled(Link)`
 	display: -webkit-flex; /* Safari */
 	align-items: center;
 	justify-content: center;
-	width: 120px;
+	width: 130px;
 	height: auto;
 	font-size: calc(${fontSize.body} + 2);
 	font-weight: ${fontWeight.medium};
@@ -170,6 +171,131 @@ export const LinkText = styled.div`
 	border-radius: inherit;
 	padding: ${spacing.small};
 	transition: inherit;
+`;
+
+export const RegularCard = styled.div`
+	display: flex;
+	display: -webkit-flex; /* Safari */
+	flex-direction: column;
+	align-items: auto;
+	justify-content: space-around;
+	width: min(350px, 300px); /* May need to be refactored */
+	height: min(450px, 400px); /* May need to be refactored */
+	padding: ${spacing.small};
+	border-radius: ${borderRadius.small};
+	border: 1px solid ${({ theme }) => theme.ui.card.borderColor};
+	background-color: ${({ theme }) => theme.ui.card.background};
+	transition: ease-out 0.4s;
+
+	box-shadow: 0px 0px 5px 2px rgba(123, 123, 123, 0.6);
+	-webkit-box-shadow: 0px 0px 5px 2px rgba(123, 123, 123, 0.6);
+	-moz-box-shadow: 0px 0px 5px 2px rgba(123, 123, 123, 0.6);
+
+	&:hover {
+		@keyframes scale-up-center {
+			0% {
+				-webkit-transform: scale(100%);
+				transform: scale(100%);
+				transition-property: transform;
+			}
+			100% {
+				-webkit-transform: scale(103%);
+				transform: scale(103%);
+			}
+		}
+
+		-webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+			both;
+		animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+	}
+
+	&:not(:hover) {
+		@keyframes scale-down-center {
+			0% {
+				-webkit-transform: scale(103%);
+				transform: scale(103%);
+				transition-property: transform;
+			}
+			100% {
+				-webkit-transform: scale(100%);
+				transform: scale(100%);
+			}
+		}
+
+		-webkit-animation: scale-down-center 0.2s
+			cubic-bezier(0.39, 0.575, 0.565, 1) both;
+		animation: scale-down-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+		transition: inherit;
+	}
+
+	img {
+		min-width: 100%;
+		height: min(180px); /* May need to be refactored */
+		border-radius: ${borderRadius.small} ${borderRadius.small} 0 0;
+		fit: cover;
+		transition: inherit;
+	}
+`;
+
+export const RegularCardTitle = styled.div`
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	width: 100%;
+	height: auto;
+	text-align: center;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: wrap;
+	font-size: ${fontSize.title};
+	font-weight: ${fontWeight.medium};
+	color: ${({ theme }) => theme.ui.card.titleColor};
+`;
+
+/* Relies on RegularCardTitle for styles*/
+export const RegularCardSecondaryTitle = styled(RegularCardTitle)`
+	-webkit-line-clamp: 3;
+	text-align: start;
+	font-size: calc(${fontSize.body} + 2);
+	font-weight: ${fontWeight.regular};
+	color: ${({ theme }) => theme.ui.card.secondaryTitleColor};
+`;
+
+/* Relies on RegularCardSecondaryTitle for styles*/
+export const RegularCardDescription = styled(RegularCardSecondaryTitle)`
+	height: 60px;
+	font-size: ${fontSize.body};
+	font-weight: ${fontWeight.light};
+	color: ${({ theme }) => theme.ui.card.descriptionColor};
+`;
+
+export const RegularCardButton = styled.span`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+
+	button {
+		width: 100%;
+		height: 35px;
+		font-size: ${fontSize.button};
+		text-align: center;
+		cursor: pointer;
+		color: ${({ theme }) => theme.ui.text.buttonText};
+		background-color: ${({ theme }) => theme.ui.button.primary};
+		border-radius: ${borderRadius.small};
+		padding: calc(${spacing.small} - 2);
+		transition: inherit;
+
+		&:hover {
+			background-color: ${({ theme }) => theme.ui.button.hover};
+			border: 1px solid ${({ theme }) => theme.ui.card.subtitleColor}; /* Needs to be changes in infrastructure.styles.js file */
+		}
+
+		&:active {
+			background-color: ${({ theme }) => theme.ui.button.active};
+			border-color: none;
+		}
+	}
 `;
 
 // Header styled components
