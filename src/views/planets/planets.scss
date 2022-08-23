@@ -1,4 +1,4 @@
-.home-page {
+.planets {
 	flex: 1;
 	display: flex;
 	flex-flow: column;
@@ -7,13 +7,6 @@
 	border-radius: 8px;
 	background-image: url("../../assets/home/ort-clouds-by-nasa.jpg");
 
-	h1 {
-		display: block;
-		font-size: 3rem;
-		font-weight: bold;
-		align-self: center;
-	}
-
-	.container {
+	.planet-container {
 	}
 }

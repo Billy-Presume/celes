@@ -15,23 +15,69 @@ export const LogoContainer = styled.div`
 	margin-top: ${spacing.medium};
 	margin-bottom: ${spacing.xlarge};
 	cursor: pointer;
-	transition: inherit;
+	transition: ease 0.5s;
 
 	img {
 		max-width: 100%;
 		height: auto;
-		transition: inherit;
+		transition: ease 0.5s;
 	}
 `;
 
 export const ContainerWrapper = styled.div`
 	width: 90%;
-	transition: inherit;
+	transition: ease 0.5s;
 `;
 
 export const Container = styled.div`
 	width: 100%;
 	height: 100%;
+`;
+
+export const SpecialContainer = styled.div`
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	justify-content: space-around;
+	overflow-x: wrap;
+	overflow-y: auto;
+	gap: 35px;
+	height: 100vh;
+	padding: 15px;
+	border-radius: inherit;
+	background-color: ${({ theme }) => theme.ui.view.specialContainer};
+
+	// BLur effect
+	-webkit-backdrop-filter: blur(15px);
+	backdrop-filter: blur(15px);
+
+	// Scrollbar
+	scroll-behavior: smooth;
+	overscroll-behavior: auto;
+
+	&::-webkit-scrollbar {
+		background-color: rgba(60, 47, 47, 0.2);
+		width: 8px;
+		margin-top: 3px;
+		border-radius: 20px;
+	}
+
+	/* background of the scrollbar except button or resizer */
+	&::-webkit-scrollbar-track {
+		display: none;
+	}
+
+	/* scrollbar itself */
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(60, 47, 47, 0.5);
+		border-radius: 20px;
+		border: 2px solid #999;
+	}
+
+	/* set button(top and bottom of the scrollbar) */
+	&::-webkit-scrollbar-button {
+		display: none;
+	}
 `;
 
 export const SearchBar = styled.div`
@@ -42,7 +88,7 @@ export const SearchBar = styled.div`
 	height: 32px;
 	border-radius: ${borderRadius.small};
 	background-color: ${({ theme }) => theme.ui.searchBar.background};
-	transition: inherit;
+	transition: ease 0.5s;
 
 	&:hover,
 	:focus {
@@ -60,7 +106,7 @@ export const SearchBar = styled.div`
 		padding: 0;
 		border-radius: 6.7px 0 0 6.7px;
 		background-color: ${({ theme }) => theme.ui.button.searchButton};
-		transition: inherit;
+		transition: ease 0.5s;
 
 		&:hover {
 			transition: all 0.2s ease;
@@ -85,7 +131,7 @@ export const SearchBar = styled.div`
 		border: none;
 		border-radius: ${borderRadius.small};
 		background: transparent;
-		transition: inherit;
+		transition: ease 0.5s;
 
 		::placeholder,
 		::-webkit-input-placeholder {
@@ -102,7 +148,7 @@ export const Separator = styled.div`
 	height: 1px;
 	background-color: ${({ theme }) => theme.ui.sidepanel.separator};
 	margin-top: ${spacing.large};
-	transition: inherit;
+	transition: ease 0.5s;
 `;
 
 export const LinkContainer = styled.span`
@@ -110,7 +156,7 @@ export const LinkContainer = styled.span`
 	margin-top: 24px;
 	border-radius: ${borderRadius.small};
 	background-color: transparent;
-	transition: inherit;
+	transition: ease 0.5s;
 `;
 
 export const LinkComponent = styled(Link)`
@@ -128,12 +174,12 @@ export const LinkComponent = styled(Link)`
 	background-color: ${({ theme }) => theme.ui.link.background};
 	border-radius: ${borderRadius.small};
 	padding: calc(${spacing.small} - 2);
-	transition: inherit;
+	transition: ease 0.5s;
 
 	&:hover {
 		color: ${({ theme }) => theme.ui.link.hover};
 		background-color: ${({ theme }) => theme.ui.link.backgroundHover};
-		transition: inherit;
+		transition: ease 0.5s;
 	}
 
 	&:focus {
@@ -170,7 +216,7 @@ export const LinkText = styled.div`
 	background-color: transparent;
 	border-radius: inherit;
 	padding: ${spacing.small};
-	transition: inherit;
+	transition: ease 0.5s;
 `;
 
 export const RegularCard = styled.div`
@@ -178,15 +224,16 @@ export const RegularCard = styled.div`
 	display: -webkit-flex; /* Safari */
 	flex-direction: column;
 	align-items: auto;
-	justify-content: space-around;
-	width: min(350px, 300px); /* May need to be refactored */
-	height: min(450px, 400px); /* May need to be refactored */
-	padding: ${spacing.small};
+	justify-content: flex-start;
+	width: min(500px, 300px); /* May need to be refactored */
+	height: min(400px, 350px); /* May need to be refactored */
+	${"" /* padding: ${spacing.small}; */}
 	border-radius: ${borderRadius.small};
 	border: 1px solid ${({ theme }) => theme.ui.card.borderColor};
 	background-color: ${({ theme }) => theme.ui.card.background};
-	transition: ease-out 0.4s;
 
+
+	/* Shadow effect */
 	box-shadow: 0px 0px 5px 2px rgba(123, 123, 123, 0.6);
 	-webkit-box-shadow: 0px 0px 5px 2px rgba(123, 123, 123, 0.6);
 	-moz-box-shadow: 0px 0px 5px 2px rgba(123, 123, 123, 0.6);
@@ -194,9 +241,13 @@ export const RegularCard = styled.div`
 	&:hover {
 		@keyframes scale-up-center {
 			0% {
+				filter: blur(.0px)
+				-webkit-font-smoothing: subpixel-antialiased;
 				-webkit-transform: scale(100%);
 				transform: scale(100%);
 				transition-property: transform;
+				transform: translateZ(0);
+				backface-visibility: hidden;
 			}
 			100% {
 				-webkit-transform: scale(103%);
@@ -204,39 +255,27 @@ export const RegularCard = styled.div`
 			}
 		}
 
-		-webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1)
+		-webkit-animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1)
 			both;
-		animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-	}
+		animation: scale-up-center 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 
-	&:not(:hover) {
-		@keyframes scale-down-center {
-			0% {
-				-webkit-transform: scale(103%);
-				transform: scale(103%);
-				transition-property: transform;
-			}
-			100% {
-				-webkit-transform: scale(100%);
-				transform: scale(100%);
-			}
-		}
-
-		-webkit-animation: scale-down-center 0.2s
-			cubic-bezier(0.39, 0.575, 0.565, 1) both;
-		animation: scale-down-center 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-		transition: inherit;
+		/* Shadow effect */
+	box-shadow: 0px 0px 9px 5px rgba(123, 123, 123, 0.9);
+	-webkit-box-shadow: 0px 0px 9px 5px rgba(123, 123, 123, 0.9);
+	-moz-box-shadow: 0px 0px 9px 5px rgba(123, 123, 123, 0.9);
 	}
 
 	img {
 		min-width: 100%;
-		height: min(180px); /* May need to be refactored */
+		height: min(185px); /* May need to be refactored */
 		border-radius: ${borderRadius.small} ${borderRadius.small} 0 0;
-		fit: cover;
-		transition: inherit;
+		border: none;
+		object-fit: cover;
+		transition: ease 0.5s;
 	}
 `;
 
+/* Modify with extreme caution, 2 other components rely on this for styling */
 export const RegularCardTitle = styled.div`
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
@@ -284,15 +323,17 @@ export const RegularCardButton = styled.span`
 		background-color: ${({ theme }) => theme.ui.button.primary};
 		border-radius: ${borderRadius.small};
 		padding: calc(${spacing.small} - 2);
-		transition: inherit;
+		transition: ease 0.5s;
 
 		&:hover {
-			background-color: ${({ theme }) => theme.ui.button.hover};
+			color: ${({ theme }) => theme.ui.text.primary};
+			background-color: ${({ theme }) => theme.ui.button.learnMoreHover};
 			border: 1px solid ${({ theme }) => theme.ui.card.subtitleColor}; /* Needs to be changes in infrastructure.styles.js file */
 		}
 
 		&:active {
-			background-color: ${({ theme }) => theme.ui.button.active};
+			color: ${({ theme }) => theme.ui.text.buttonText};
+			background-color: ${({ theme }) => theme.ui.button.learnMoreActive};
 			border-color: none;
 		}
 	}
@@ -314,7 +355,7 @@ export const SidePanel = styled.div`
 	padding: ${spacing.small};
 	border-radius: ${borderRadius.small};
 	background-color: ${({ theme }) => theme.ui.sidepanel.background};
-	transition: inherit;
+	transition: ease 0.5s;
 
 	@media only screen and (max-width: 768px) {
 		display: none;
@@ -336,7 +377,7 @@ export const SidePanelTogglerButton = styled.button`
 	background-color: ${({ theme }) => theme.ui.button.secondary};
 	box-shadow: 0 0 4px ${({ theme }) => theme.ui.button.active},
 		0 0 7px ${({ theme }) => theme.ui.button.active};
-	transition: inherit;
+	transition: ease 0.5s;
 `;
 
 export const SidePanelSearchBar = styled(SearchBar)`
@@ -355,7 +396,7 @@ export const SidePanelInnerWrapper = styled.div`
 	align-items: center;
 	height: 100%;
 	width: 100%;
-	transition: inherit;
+	transition: ease 0.5s;
 `;
 
 export const SidePanelLinkContainer = styled(LinkContainer)`
@@ -366,7 +407,7 @@ export const SidePanelLinkContainer = styled(LinkContainer)`
 	${"" /* refactor for togglable panel */}
 	align-self: flex-start;
 	width: ${({ isPanelOpen }) => (isPanelOpen ? `100%` : `fit-content`)};
-	transition: inherit;
+	transition: ease 0.5s;
 `;
 
 export const SidePanelLinkComponent = styled(LinkComponent)`
@@ -374,7 +415,7 @@ export const SidePanelLinkComponent = styled(LinkComponent)`
 	justify-content: flex-start;
 	width: 100%;
 	height: auto;
-	transition: inherit;
+	transition: ease 0.5s;
 `;
 
 export const SidePanelLinkIcon = styled.div`
@@ -383,7 +424,7 @@ export const SidePanelLinkIcon = styled.div`
 	width: 16px;
 	height: 16px;
 	margin: ${({ isPanelOpen }) => (!isPanelOpen ? `12px` : `0`)};
-	transition: inherit;
+	transition: ease 0.5s;
 `;
 
 // Theme settings styled components
@@ -393,14 +434,14 @@ export const ThemeSettings = styled.div`
 	align-items: center;
 	font-size: ${fontSize.body};
 	margin-top: ${spacing.medium};
-	transition: inherit;
+	transition: ease 0.5s;
 `;
 
 export const ThemeSettingsTitle = styled.span`
 	display: block;
 	flex: 1;
 	color: ${({ theme }) => theme.ui.button.active};
-	transition: inherit;
+	transition: ease 0.5s;
 `;
 
 export const ThemeSettingsTogglerButton = styled.button`
@@ -434,7 +475,7 @@ export const FooterContainer = styled.footer`
 	border-radius: ${borderRadius.small};
 	color: ${({ theme }) => theme.ui.footer.color};
 	background-color: ${({ theme }) => theme.ui.footer.background};
-	transition: inherit;
+	transition: ease 0.5s;
 
 	@media only screen and (max-width: 768px) {
 		flex-flow: column wrap;
@@ -450,7 +491,7 @@ export const FooterContainer = styled.footer`
 		justify-content: center;
 		gap: 1em;
 		width: 100%;
-		transition: inherit;
+		transition: ease 0.5s;
 	}
 `;
 

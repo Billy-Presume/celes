@@ -42,6 +42,7 @@ export const GlobalStyle = createGlobalStyle`
   main {
       flex: 1;
       display: flex;
+      font-family: 'Roboto', sans-serif;
       background: ${({ theme }) => theme.ui.view.background2};;
       color: ${({ theme }) => theme.ui.view.color};
       padding: 5px;
