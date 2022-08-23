@@ -319,14 +319,14 @@ export const RegularCardButton = styled.span`
 		font-size: ${fontSize.button};
 		text-align: center;
 		cursor: pointer;
-		color: ${({ theme }) => theme.ui.text.buttonText};
-		background-color: ${({ theme }) => theme.ui.button.primary};
+		color: ${({ theme }) => theme.ui.text.learnMoreText};
+		background-color: ${({ theme }) => theme.ui.button.learnMorePrimary};
 		border-radius: ${borderRadius.small};
 		padding: calc(${spacing.small} - 2);
 		transition: ease 0.5s;
 
 		&:hover {
-			color: ${({ theme }) => theme.ui.text.primary};
+			color: ${({ theme }) => theme.ui.text.learnMoreTextPrimary};
 			background-color: ${({ theme }) => theme.ui.button.learnMoreHover};
 			border: 1px solid ${({ theme }) => theme.ui.card.subtitleColor}; /* Needs to be changes in infrastructure.styles.js file */
 		}

@@ -22,13 +22,13 @@ export const colors = {
 			light: {
 				background: "#F3F3F3",
 				background2: "#FFF",
-				specialContainer: "rgba(255, 255, 255, 0.85)",
+				specialContainer: "rgba(255, 232, 214, 0.5)",
 				color: "#000d22",
 			},
 			dark: {
 				background: "#222",
 				background2: "#161616",
-				specialContainer: "rgba(0, 0, 0, 0.85)",
+				specialContainer: "rgba(0, 0, 0, 0.5)",
 				color: "#E3E3E3",
 			},
 		},
@@ -107,7 +107,7 @@ export const colors = {
 				titleColor: "#E3E3E3",
 				secondaryTitleColor: "#FFF",
 				subtitleColor: "#D4E3FB",
-				descriptionColor: "#E9E9E9",
+				descriptionColor: "#AAA",
 			},
 		},
 		button: {
@@ -117,8 +117,10 @@ export const colors = {
 				primary: "#1064EA",
 				secondary: "#D4E3FB",
 				hover: "#A8C7F7",
-				learnMoreHover: "#FFF",
 				active: "#D4E3FB",
+
+				learnMorePrimary: "#FF971D",
+				learnMoreHover: "#F5CA7B",
 				learnMoreActive: "#111F4D",
 			},
 			dark: {
@@ -127,8 +129,10 @@ export const colors = {
 				primary: "#FF971D",
 				secondary: "#FDF5E7",
 				hover: "#FBECCF",
-				learnMoreHover: "#1064EA",
 				active: "#f6cd61",
+
+				learnMorePrimary: "#1064EA",
+				learnMoreHover: "#A8C7F7",
 				learnMoreActive: "#FFF",
 			},
 		},
@@ -139,6 +143,8 @@ export const colors = {
 				secondary: "#777",
 				tertiary: "#AAA",
 				buttonText: "#FFF",
+				learnMoreTextPrimary: "#111",
+				learnMoreText: "#111",
 			},
 			dark: {
 				searchInput: "#FFF",
@@ -146,6 +152,8 @@ export const colors = {
 				secondary: "#F5CA7B",
 				tertiary: "#E9F1FD",
 				buttonText: "#111",
+				learnMoreTextPrimary: "#111F4D",
+				learnMoreText: "#FFF",
 			},
 		},
 		icon: {
